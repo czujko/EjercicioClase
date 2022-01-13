@@ -1,13 +1,13 @@
 lista = []
-nombre = input("Introduce un nombre: ")
-while nombre != "":
+nombre = input("Introduce un nombre: ").lower()
+while nombre != "0":
     lista.append(nombre)
-    nombre = input("Introduce un nombre: ")
+    nombre = input("Introduce un nombre: ").lower()
 print("Lista de nombres:", lista)
 
-nombre = input("Introduce un nombre para eliminar: ")
-if nombre == '0':
-    print("No has introducido ningún nombre")
-else:
+nombre = input("Introduce un nombre para eliminar: ").lower()
+while nombre != '0':
     lista.remove(nombre)
-    print("Lista de nombres:", lista)
+    nombre = input("Introduce un nombre para eliminar: ").lower()
+
+print("Lista de nombres:", lista)
